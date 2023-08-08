@@ -1,0 +1,86 @@
+div -  &divide;
+percent - &percnt;
+multi - &times; 
+add - &plus;
+subtract - &minus;  
+equal - &equals;
+dot - &period;
+del - &otimes;   U+232B;   &#9003;
+clr - &olarr;
+
+
+
+<button onclick="clearScreen()">&olarr;</button> - sorted
+
+<button onclick="Modules()">&percnt;</button> - remainder
+
+
+<button onclick="deleteNumber()">&#9003;</button> - delete only  one number
+
+
+<button onclick="divide()">&divide;</button> divide function
+
+
+            
+                    <button class="side" onclick="Multiply()">&times;</button> - Multiply function
+                    
+
+                    
+                    
+
+                        <button  class="side" onclick="subtract()">&minus;</button> - minus function 
+
+                        
+
+
+
+
+
+
+
+                        <div class="main-container">
+        <div class="calculator">
+            <div class="input-group">
+                <input type="text" class="cal-control" id="display">
+            </div>
+            <div class="cal-button">
+                <div class="row-1">
+                <button>&olarr;</button>
+                <button>&percnt;</button>
+                <button>&#9003;</button>
+                <button  class="side" >&divide;</button>
+                </div>
+                
+                <div class="row-2">
+                    <button id="7">7</button>
+                    <button id="8">8</button>
+                    <button id="9">9</button>
+                    <button class="side" >&times;</button>
+                    </div>
+
+                    <div class="row-3">
+                        <button id="4">4</button>
+                        <button id="5">5</button>
+                        <button id="6">6</button>
+                        <button  class="side" >&minus;</button>
+                        </div>
+
+                  
+                        <div class="row-4">
+                            <button id="1">1</button>
+                            <button id="2">2</button>
+                            <button id="3">3</button>
+                            <button   class="side" >&plus;</button>
+                            </div>  
+                            <div class="row-5">
+                                <button  class="side" >&equals;</button>
+                            </div>    
+            </div>
+        </div>
+    </div>
+
+                         
+                            <button class="side" onclick="Add()">&plus;</button> - add function
+
+
+                             <button  class="side" onclick="EqualTo()">&equals;</button> - equal to

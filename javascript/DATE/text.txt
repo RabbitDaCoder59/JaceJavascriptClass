@@ -1,0 +1,33 @@
+// Create a Date object from the inputs
+// This line of code creates a new Date object using the year, month, and day provided by the user.
+// The month is adjusted by subtracting 1 because months in JavaScript are zero-based (0 for January, 1 for February, and so on).
+const dob = new Date(yearInput, monthInput - 1, dayInput);
+const currentDate = new Date();
+
+// Calculate the age difference in milliseconds
+// Here, we're calculating the difference in time between the current date and the user's date of birth.
+// This difference is calculated in milliseconds.
+const ageDiff = currentDate - dob;
+
+// Convert milliseconds to years, months, and days
+// We define a constant to represent the number of milliseconds in a single day.
+const millisecondsPerDay = 24 * 60 * 60 * 1000;
+
+// Next, we calculate the number of years by dividing the age difference in milliseconds by the number of milliseconds in a year.
+// This calculation assumes a year is 365 days.
+const years = Math.floor(ageDiff / (millisecondsPerDay * 365));
+
+// The remaining days are calculated by finding the remainder of the age difference divided by the number of milliseconds in a year.
+// This gives us the number of days that are left after considering complete years.
+const remainingDays = ageDiff % (millisecondsPerDay * 365);
+
+// We then calculate the number of months using a similar approach.
+// However, since months don't have a fixed number of days (they can have 28 to 31 days), we estimate an average of 30 days per month.
+// This calculation gives us an approximate number of months.
+const months = Math.floor(remainingDays / (millisecondsPerDay * 30));
+
+// Finally, we calculate the remaining days by finding the remainder of the remaining days divided by the number of milliseconds in a month.
+// This gives us the days that are left after considering complete months.
+const days = Math.floor(
+  (remainingDays % (millisecondsPerDay * 30)) / millisecondsPerDay
+);

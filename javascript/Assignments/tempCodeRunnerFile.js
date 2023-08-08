@@ -1,0 +1,1 @@
+studentArray.splice(3, 1);
